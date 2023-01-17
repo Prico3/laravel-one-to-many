@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <h1>{{ $post->title }}</h1>
+        <h5>{{ $post->category?->name }}</h5>
         @if ($post->cover_image)
             <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ 'Cover image di ' . $post->title }}">
         @else

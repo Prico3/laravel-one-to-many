@@ -23,6 +23,16 @@
                     </div>
 
                     <div class="form-group mb-3">
+                        <label for="category">Categoria</label>
+                        <select name="category_id" id="category" class="form-select">
+                            <option value=""></option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
                         <label for="cover_image">Immagine</label>
                         <input type="file" name="cover_image" id="cover_image"
                             class="form-control @error('cover_image')
